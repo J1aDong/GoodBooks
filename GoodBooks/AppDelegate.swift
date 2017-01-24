@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import LeanCloud
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // applicationId 即 App Id，applicationKey 是 App Key
+        LeanCloud.initialize(applicationID: "TA9p1dH9HIS1cDaVB8cu33eO-gzGzoHsz", applicationKey: "M0Da93ljH6lN61H3iFGl5Nnr")
+        
         return true
     }
 

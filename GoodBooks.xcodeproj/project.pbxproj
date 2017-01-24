@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35B25A3022E402E723AAD8B1 /* Pods_GoodBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B414C350CF580097DAEC306 /* Pods_GoodBooks.framework */; };
 		90D07A761E37710000024CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D07A751E37710000024CB4 /* AppDelegate.swift */; };
 		90D07A781E37710000024CB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D07A771E37710000024CB4 /* ViewController.swift */; };
 		90D07A7B1E37710000024CB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D07A791E37710000024CB4 /* Main.storyboard */; };
@@ -14,6 +15,7 @@
 		90D07A801E37710000024CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D07A7F1E37710000024CB4 /* Assets.xcassets */; };
 		90D07A831E37710000024CB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 90D07A811E37710000024CB4 /* LaunchScreen.storyboard */; };
 		90D07A8E1E37710000024CB4 /* GoodBooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D07A8D1E37710000024CB4 /* GoodBooksTests.swift */; };
+		90D0B2231E378C76003186E6 /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0B2221E378C76003186E6 /* config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3AA54378E2CEAADECF719E1C /* Pods-GoodBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoodBooks/Pods-GoodBooks.release.xcconfig"; sourceTree = "<group>"; };
+		7B414C350CF580097DAEC306 /* Pods_GoodBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D07A721E37710000024CB4 /* GoodBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D07A751E37710000024CB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90D07A771E37710000024CB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +42,8 @@
 		90D07A891E37710000024CB4 /* GoodBooksTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GoodBooksTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D07A8D1E37710000024CB4 /* GoodBooksTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoodBooksTests.swift; sourceTree = "<group>"; };
 		90D07A8F1E37710000024CB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90D0B2221E378C76003186E6 /* config.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		C4BE98F45DDFC75F2B79CB44 /* Pods-GoodBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoodBooks/Pods-GoodBooks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35B25A3022E402E723AAD8B1 /* Pods_GoodBooks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,12 +65,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3131D105E20E56256D8DE174 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C4BE98F45DDFC75F2B79CB44 /* Pods-GoodBooks.debug.xcconfig */,
+				3AA54378E2CEAADECF719E1C /* Pods-GoodBooks.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		90D07A691E37710000024CB4 = {
 			isa = PBXGroup;
 			children = (
 				90D07A741E37710000024CB4 /* GoodBooks */,
 				90D07A8C1E37710000024CB4 /* GoodBooksTests */,
 				90D07A731E37710000024CB4 /* Products */,
+				3131D105E20E56256D8DE174 /* Pods */,
+				9444A4491AA9AC7E95DF977A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +104,7 @@
 				90D07A811E37710000024CB4 /* LaunchScreen.storyboard */,
 				90D07A841E37710000024CB4 /* Info.plist */,
 				90D07A7C1E37710000024CB4 /* GoodBooks.xcdatamodeld */,
+				90D0B2221E378C76003186E6 /* config.swift */,
 			);
 			path = GoodBooks;
 			sourceTree = "<group>";
@@ -99,6 +118,14 @@
 			path = GoodBooksTests;
 			sourceTree = "<group>";
 		};
+		9444A4491AA9AC7E95DF977A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7B414C350CF580097DAEC306 /* Pods_GoodBooks.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +133,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 90D07A921E37710000024CB4 /* Build configuration list for PBXNativeTarget "GoodBooks" */;
 			buildPhases = (
+				A7C033C080D56F11BE306858 /* [CP] Check Pods Manifest.lock */,
 				90D07A6E1E37710000024CB4 /* Sources */,
 				90D07A6F1E37710000024CB4 /* Frameworks */,
 				90D07A701E37710000024CB4 /* Resources */,
+				C1BB0CF1AC0FC69E39A6040C /* [CP] Embed Pods Frameworks */,
+				8EE070FE5A4FF7331C575EC7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,12 +229,61 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		8EE070FE5A4FF7331C575EC7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoodBooks/Pods-GoodBooks-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A7C033C080D56F11BE306858 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C1BB0CF1AC0FC69E39A6040C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GoodBooks/Pods-GoodBooks-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		90D07A6E1E37710000024CB4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				90D07A7E1E37710000024CB4 /* GoodBooks.xcdatamodeld in Sources */,
+				90D0B2231E378C76003186E6 /* config.swift in Sources */,
 				90D07A781E37710000024CB4 /* ViewController.swift in Sources */,
 				90D07A761E37710000024CB4 /* AppDelegate.swift in Sources */,
 			);
@@ -343,8 +422,11 @@
 		};
 		90D07A931E37710000024CB4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4BE98F45DDFC75F2B79CB44 /* Pods-GoodBooks.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = PH2TMWBZ42;
 				INFOPLIST_FILE = GoodBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -356,8 +438,11 @@
 		};
 		90D07A941E37710000024CB4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3AA54378E2CEAADECF719E1C /* Pods-GoodBooks.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = PH2TMWBZ42;
 				INFOPLIST_FILE = GoodBooks/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -416,6 +501,7 @@
 				90D07A941E37710000024CB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		90D07A951E37710000024CB4 /* Build configuration list for PBXNativeTarget "GoodBooksTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +510,7 @@
 				90D07A971E37710000024CB4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
