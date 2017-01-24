@@ -19,6 +19,35 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        self.window = UIWindow(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
+        
+        let tabbarController = UITabBarController()
+        
+        let rankController = UINavigationController(rootViewController: rankViewController())
+        let searchConroller = UINavigationController(rootViewController: searchViewController())
+        let circleController = UINavigationController(rootViewController: circleViewController())
+        let pushController = UINavigationController(rootViewController: pushViewController())
+        let moreController = UINavigationController(rootViewController: moreViewController())
+        
+        tabbarController.viewControllers = [rankController,searchConroller,pushController,circleController,moreController]
+        
+        let tabbarItem1 = UITabBarItem(title: "排行榜", image: UIImage(named: "bio"), selectedImage: UIImage(named: "bio_red"))
+        let tabbarItem2 = UITabBarItem(title: "发现", image: UIImage(named: "timer 2"),selectedImage:UIImage(named:"timer 2_red"))
+        let tabbarItem3 = UITabBarItem(title: "", image: UIImage(named: "pencil"),selectedImage: UIImage(named: "pencil_red"))
+        let tabbarItem4 = UITabBarItem(title: "圈子", image: UIImage(named: "users two-2"),selectedImage:UIImage(named:"users two-2__red"))
+        let tabbarItem5 = UITabBarItem(title: "更多", image: UIImage(named: "more"),selectedImage:UIImage(named:"more_red"))
+        
+        rankController.tabBarItem = tabbarItem1
+        searchConroller.tabBarItem = tabbarItem2
+        pushController.tabBarItem = tabbarItem3
+        circleController.tabBarItem = tabbarItem4
+        moreController.tabBarItem = tabbarItem5
+
+        rankController.tabBarController?.tabBar.tintColor = MAIN_RED
+
+        self.window?.rootViewController = tabbarController
+        self.window?.makeKeyAndVisible()
+        
         // applicationId 即 App Id，applicationKey 是 App Key
         LeanCloud.initialize(applicationID: "TA9p1dH9HIS1cDaVB8cu33eO-gzGzoHsz", applicationKey: "M0Da93ljH6lN61H3iFGl5Nnr")
         
