@@ -19,6 +19,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        //MARK: 打印所有的字体
+//        let familyNames = UIFont.familyNames
+//        for fanilyName:String in familyNames
+//        {
+//            print("Family: \(fanilyName.utf8)")
+//            let fontNames = UIFont.fontNames(forFamilyName: fanilyName)
+//            for fontName:String in fontNames
+//            {
+//                //[@心语风尚]这里打印的系统的字体，对汉字不是全适用，对英语都适用
+//                print("\t",fontName,"\n")
+//            }
+//        }
+        
         self.window = UIWindow(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
         
         let tabbarController = UITabBarController()

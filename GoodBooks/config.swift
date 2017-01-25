@@ -20,3 +20,6 @@ let SCREEN_HEIGHT = UIScreen.main.bounds.size.height
 
 //MARK:- 红色
 let MAIN_RED = UIColor(colorLiteralRed: 235/255, green: 114/255, blue: 118/255, alpha: 1)
+
+//MARK:- 方正粗金陵字体
+let MY_FONT = "FZCUJINLJW--GB1-0"

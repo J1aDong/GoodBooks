@@ -12,24 +12,28 @@ class pushViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = UIColor.white
 
         // Do any additional setup after loading the view.
+        
+        self.setNavigationBar()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
+    private func setNavigationBar() {
+        let navigationView = UIView(frame: CGRect(x: 0, y: -20, width: SCREEN_WIDTH, height: 65))
+        navigationView.backgroundColor = UIColor.white
+        self.navigationController?.navigationBar.addSubview(navigationView)
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        let addBookBtn = UIButton(frame: CGRect(x: 20, y: 20, width: SCREEN_HEIGHT, height: 45))
+        addBookBtn.setImage(UIImage(named: "plus circle"), for: .normal)
+        addBookBtn.setTitleColor(UIColor.black, for: .normal)
+        addBookBtn.setTitle(" 新建书评", for: .normal)
+//        addBookBtn.titleLabel?.font = UIFont(name: <#T##String#>, size: 15)
     }
-    */
 
 }
