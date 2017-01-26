@@ -20,6 +20,9 @@
 		90D0B2301E379BC6003186E6 /* moreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0B22F1E379BC6003186E6 /* moreViewController.swift */; };
 		90D0B2321E379BD0003186E6 /* pushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0B2311E379BD0003186E6 /* pushViewController.swift */; };
 		90D0B2351E388B98003186E6 /* FZCuJinLJW.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 90D0B2341E387475003186E6 /* FZCuJinLJW.TTF */; };
+		90D0B2381E38B2BF003186E6 /* pushNewBookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0B2371E38B2BF003186E6 /* pushNewBookViewController.swift */; };
+		90D0B23B1E38B388003186E6 /* UiUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D0B23A1E38B388003186E6 /* UiUtil.swift */; };
+		90D2766E1E38F55E005904E9 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D2766D1E38F55E005904E9 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		90D0B22F1E379BC6003186E6 /* moreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = moreViewController.swift; sourceTree = "<group>"; };
 		90D0B2311E379BD0003186E6 /* pushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pushViewController.swift; sourceTree = "<group>"; };
 		90D0B2341E387475003186E6 /* FZCuJinLJW.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = FZCuJinLJW.TTF; sourceTree = "<group>"; };
+		90D0B2371E38B2BF003186E6 /* pushNewBookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pushNewBookViewController.swift; sourceTree = "<group>"; };
+		90D0B23A1E38B388003186E6 /* UiUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UiUtil.swift; sourceTree = "<group>"; };
+		90D2766D1E38F55E005904E9 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		C4BE98F45DDFC75F2B79CB44 /* Pods-GoodBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoodBooks/Pods-GoodBooks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -106,6 +112,8 @@
 		90D07A741E37710000024CB4 /* GoodBooks */ = {
 			isa = PBXGroup;
 			children = (
+				90D0B2391E38B361003186E6 /* common */,
+				90D0B2361E38B290003186E6 /* pushNewBook */,
 				90D0B2271E379B66003186E6 /* more */,
 				90D0B2261E379B5C003186E6 /* circle */,
 				90D0B2281E379B75003186E6 /* push */,
@@ -176,6 +184,23 @@
 				90D0B2341E387475003186E6 /* FZCuJinLJW.TTF */,
 			);
 			name = resource;
+			sourceTree = "<group>";
+		};
+		90D0B2361E38B290003186E6 /* pushNewBook */ = {
+			isa = PBXGroup;
+			children = (
+				90D0B2371E38B2BF003186E6 /* pushNewBookViewController.swift */,
+			);
+			name = pushNewBook;
+			sourceTree = "<group>";
+		};
+		90D0B2391E38B361003186E6 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				90D0B23A1E38B388003186E6 /* UiUtil.swift */,
+				90D2766D1E38F55E005904E9 /* Extensions.swift */,
+			);
+			name = common;
 			sourceTree = "<group>";
 		};
 		9444A4491AA9AC7E95DF977A /* Frameworks */ = {
@@ -343,6 +368,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90D07A7E1E37710000024CB4 /* GoodBooks.xcdatamodeld in Sources */,
+				90D0B23B1E38B388003186E6 /* UiUtil.swift in Sources */,
 				90D0B22C1E379BAE003186E6 /* searchViewController.swift in Sources */,
 				90D0B2321E379BD0003186E6 /* pushViewController.swift in Sources */,
 				90D0B2301E379BC6003186E6 /* moreViewController.swift in Sources */,
@@ -350,6 +376,8 @@
 				90D0B22A1E379B9E003186E6 /* rankViewController.swift in Sources */,
 				90D0B22E1E379BBB003186E6 /* circleViewController.swift in Sources */,
 				90D07A761E37710000024CB4 /* AppDelegate.swift in Sources */,
+				90D2766E1E38F55E005904E9 /* Extensions.swift in Sources */,
+				90D0B2381E38B2BF003186E6 /* pushNewBookViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

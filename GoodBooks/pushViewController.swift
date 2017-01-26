@@ -8,14 +8,16 @@
 
 import UIKit
 
+
 class pushViewController: UIViewController {
+    var vc: UIViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
 
         // Do any additional setup after loading the view.
-        
+
         self.setNavigationBar()
     }
 
@@ -31,9 +33,22 @@ class pushViewController: UIViewController {
 
         let addBookBtn = UIButton(frame: CGRect(x: 20, y: 20, width: SCREEN_HEIGHT, height: 45))
         addBookBtn.setImage(UIImage(named: "plus circle"), for: .normal)
+        addBookBtn.showsTouchWhenHighlighted = true
         addBookBtn.setTitleColor(UIColor.black, for: .normal)
         addBookBtn.setTitle(" 新建书评", for: .normal)
-//        addBookBtn.titleLabel?.font = UIFont(name: <#T##String#>, size: 15)
+        addBookBtn.titleLabel?.font = UIFont(name: MY_FONT, size: 15)
+        // 按钮文字显示居左
+        addBookBtn.contentHorizontalAlignment = .left
+        addBookBtn.addTarget(self, action: #selector(self.pushNewBook), for: .touchUpInside)
+        navigationView.addSubview(addBookBtn)
+
     }
 
+    func pushNewBook() {
+        vc = pushNewBookViewController()
+        UiUtil.addTitleWithTitle(target: vc!)
+        self.present(vc!, animated: true) {
+
+        }
+    }
 }
