@@ -8,7 +8,7 @@
 
 import UIKit
 
-class pushNewBookViewController: UIViewController,BookTitleDelegate {
+class pushNewBookViewController: UIViewController,BookTitleDelegate,PhotoPickerDelegate,VPImageCropperDelegate {
     
     var bookTitle:BookTitle?
 
@@ -29,6 +29,34 @@ class pushNewBookViewController: UIViewController,BookTitleDelegate {
     
     func choiceCover() {
         print("choiceCover")
+        
+        let vc = photoPickerViewController()
+        vc.delegate = self
+        self.present(vc, animated: true) { 
+            
+        }
+    }
+    
+    func getImageFromPicker(image: UIImage) {
+        let croVC = VPImageCropperViewController(image: image, cropFrame: CGRect(x: 0, y: 100, width: SCREEN_WIDTH, height: SCREEN_WIDTH*1.273), limitScaleRatio: 3)
+        croVC?.delegate = self
+        self.present(croVC!, animated: true) { 
+            
+        }
+        
+    }
+    
+    func imageCropper(_ cropperViewController: VPImageCropperViewController!, didFinished editedImage: UIImage!) {
+        self.bookTitle?.bookCover?.setImage(editedImage, for: .normal)
+        cropperViewController.dismiss(animated: true) { 
+            
+        }
+    }
+    
+    func imageCropperDidCancel(_ cropperViewController: VPImageCropperViewController!) {
+        cropperViewController.dismiss(animated: true) {
+            
+        }
     }
     
     override func cancel(){

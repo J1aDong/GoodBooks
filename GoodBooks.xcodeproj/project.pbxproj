@@ -37,6 +37,8 @@
 		90E28B501E3A2F3D00A41D0C /* page3.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E28B431E3A2F3D00A41D0C /* page3.png */; };
 		90E28B511E3A2F3D00A41D0C /* page4.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E28B441E3A2F3D00A41D0C /* page4.png */; };
 		90E28B521E3A2F3D00A41D0C /* red_point.png in Resources */ = {isa = PBXBuildFile; fileRef = 90E28B451E3A2F3D00A41D0C /* red_point.png */; };
+		90E28B541E3A36CA00A41D0C /* photoPickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90E28B531E3A36CA00A41D0C /* photoPickerViewController.swift */; };
+		90E28B591E3CD6F800A41D0C /* VPImageCropperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 90E28B581E3CD6F800A41D0C /* VPImageCropperViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,10 @@
 		90E28B431E3A2F3D00A41D0C /* page3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page3.png; sourceTree = "<group>"; };
 		90E28B441E3A2F3D00A41D0C /* page4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = page4.png; sourceTree = "<group>"; };
 		90E28B451E3A2F3D00A41D0C /* red_point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = red_point.png; sourceTree = "<group>"; };
+		90E28B531E3A36CA00A41D0C /* photoPickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = photoPickerViewController.swift; sourceTree = "<group>"; };
+		90E28B571E3CD6F800A41D0C /* VPImageCropperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VPImageCropperViewController.h; sourceTree = "<group>"; };
+		90E28B581E3CD6F800A41D0C /* VPImageCropperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VPImageCropperViewController.m; sourceTree = "<group>"; };
+		90E28B621E3CD87C00A41D0C /* headBriage.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = headBriage.h; sourceTree = "<group>"; };
 		C4BE98F45DDFC75F2B79CB44 /* Pods-GoodBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GoodBooks/Pods-GoodBooks.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +159,7 @@
 				90D07A841E37710000024CB4 /* Info.plist */,
 				90D07A7C1E37710000024CB4 /* GoodBooks.xcdatamodeld */,
 				90D0B2221E378C76003186E6 /* config.swift */,
+				90E28B621E3CD87C00A41D0C /* headBriage.h */,
 			);
 			path = GoodBooks;
 			sourceTree = "<group>";
@@ -209,6 +216,7 @@
 		90D0B2331E387445003186E6 /* resource */ = {
 			isa = PBXGroup;
 			children = (
+				90E28B551E3CD63000A41D0C /* thirdKit */,
 				90E28B381E3A2F3D00A41D0C /* Image */,
 				90D0B2341E387475003186E6 /* FZCuJinLJW.TTF */,
 			);
@@ -220,6 +228,7 @@
 			children = (
 				90D0B2371E38B2BF003186E6 /* pushNewBookViewController.swift */,
 				90E28B361E39EFAE00A41D0C /* BookTitle.swift */,
+				90E28B531E3A36CA00A41D0C /* photoPickerViewController.swift */,
 			);
 			name = pushNewBook;
 			sourceTree = "<group>";
@@ -251,6 +260,23 @@
 				90E28B451E3A2F3D00A41D0C /* red_point.png */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		90E28B551E3CD63000A41D0C /* thirdKit */ = {
+			isa = PBXGroup;
+			children = (
+				90E28B561E3CD6F800A41D0C /* VPImageCropperViewController */,
+			);
+			name = thirdKit;
+			sourceTree = "<group>";
+		};
+		90E28B561E3CD6F800A41D0C /* VPImageCropperViewController */ = {
+			isa = PBXGroup;
+			children = (
+				90E28B571E3CD6F800A41D0C /* VPImageCropperViewController.h */,
+				90E28B581E3CD6F800A41D0C /* VPImageCropperViewController.m */,
+			);
+			path = VPImageCropperViewController;
 			sourceTree = "<group>";
 		};
 		9444A4491AA9AC7E95DF977A /* Frameworks */ = {
@@ -434,11 +460,13 @@
 				90D0B23B1E38B388003186E6 /* UiUtil.swift in Sources */,
 				90D0B22C1E379BAE003186E6 /* searchViewController.swift in Sources */,
 				90E28B371E39EFAE00A41D0C /* BookTitle.swift in Sources */,
+				90E28B541E3A36CA00A41D0C /* photoPickerViewController.swift in Sources */,
 				90D0B2321E379BD0003186E6 /* pushViewController.swift in Sources */,
 				90D0B2301E379BC6003186E6 /* moreViewController.swift in Sources */,
 				90D0B2231E378C76003186E6 /* config.swift in Sources */,
 				90D0B22A1E379B9E003186E6 /* rankViewController.swift in Sources */,
 				90D0B22E1E379BBB003186E6 /* circleViewController.swift in Sources */,
+				90E28B591E3CD6F800A41D0C /* VPImageCropperViewController.m in Sources */,
 				90D07A761E37710000024CB4 /* AppDelegate.swift in Sources */,
 				90D2766E1E38F55E005904E9 /* Extensions.swift in Sources */,
 				90D0B2381E38B2BF003186E6 /* pushNewBookViewController.swift in Sources */,
@@ -580,6 +608,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.j1adong.GoodBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Volumes/HDD/work/MyProjects/GoodBooks/GoodBooks/headBriage.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -596,6 +625,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.j1adong.GoodBooks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = /Volumes/HDD/work/MyProjects/GoodBooks/GoodBooks/headBriage.h;
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
