@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		35B25A3022E402E723AAD8B1 /* Pods_GoodBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B414C350CF580097DAEC306 /* Pods_GoodBooks.framework */; };
+		901C82731E3D608E0089DC9D /* push_TitleController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C82721E3D608E0089DC9D /* push_TitleController.swift */; };
+		901C82751E3D60C60089DC9D /* push_TypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C82741E3D60C60089DC9D /* push_TypeViewController.swift */; };
+		901C82771E3D7D830089DC9D /* push_DescriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C82761E3D7D830089DC9D /* push_DescriptionViewController.swift */; };
 		90D07A761E37710000024CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D07A751E37710000024CB4 /* AppDelegate.swift */; };
 		90D07A7E1E37710000024CB4 /* GoodBooks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90D07A7C1E37710000024CB4 /* GoodBooks.xcdatamodeld */; };
 		90D07A801E37710000024CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D07A7F1E37710000024CB4 /* Assets.xcassets */; };
@@ -54,6 +57,9 @@
 /* Begin PBXFileReference section */
 		3AA54378E2CEAADECF719E1C /* Pods-GoodBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GoodBooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-GoodBooks/Pods-GoodBooks.release.xcconfig"; sourceTree = "<group>"; };
 		7B414C350CF580097DAEC306 /* Pods_GoodBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GoodBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		901C82721E3D608E0089DC9D /* push_TitleController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = push_TitleController.swift; sourceTree = "<group>"; };
+		901C82741E3D60C60089DC9D /* push_TypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = push_TypeViewController.swift; sourceTree = "<group>"; };
+		901C82761E3D7D830089DC9D /* push_DescriptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = push_DescriptionViewController.swift; sourceTree = "<group>"; };
 		90D07A721E37710000024CB4 /* GoodBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D07A751E37710000024CB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90D07A7D1E37710000024CB4 /* GoodBooks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoodBooks.xcdatamodel; sourceTree = "<group>"; };
@@ -229,6 +235,9 @@
 				90D0B2371E38B2BF003186E6 /* pushNewBookViewController.swift */,
 				90E28B361E39EFAE00A41D0C /* BookTitle.swift */,
 				90E28B531E3A36CA00A41D0C /* photoPickerViewController.swift */,
+				901C82721E3D608E0089DC9D /* push_TitleController.swift */,
+				901C82741E3D60C60089DC9D /* push_TypeViewController.swift */,
+				901C82761E3D7D830089DC9D /* push_DescriptionViewController.swift */,
 			);
 			name = pushNewBook;
 			sourceTree = "<group>";
@@ -459,6 +468,7 @@
 				90D07A7E1E37710000024CB4 /* GoodBooks.xcdatamodeld in Sources */,
 				90D0B23B1E38B388003186E6 /* UiUtil.swift in Sources */,
 				90D0B22C1E379BAE003186E6 /* searchViewController.swift in Sources */,
+				901C82751E3D60C60089DC9D /* push_TypeViewController.swift in Sources */,
 				90E28B371E39EFAE00A41D0C /* BookTitle.swift in Sources */,
 				90E28B541E3A36CA00A41D0C /* photoPickerViewController.swift in Sources */,
 				90D0B2321E379BD0003186E6 /* pushViewController.swift in Sources */,
@@ -466,10 +476,12 @@
 				90D0B2231E378C76003186E6 /* config.swift in Sources */,
 				90D0B22A1E379B9E003186E6 /* rankViewController.swift in Sources */,
 				90D0B22E1E379BBB003186E6 /* circleViewController.swift in Sources */,
+				901C82771E3D7D830089DC9D /* push_DescriptionViewController.swift in Sources */,
 				90E28B591E3CD6F800A41D0C /* VPImageCropperViewController.m in Sources */,
 				90D07A761E37710000024CB4 /* AppDelegate.swift in Sources */,
 				90D2766E1E38F55E005904E9 /* Extensions.swift in Sources */,
 				90D0B2381E38B2BF003186E6 /* pushNewBookViewController.swift in Sources */,
+				901C82731E3D608E0089DC9D /* push_TitleController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
