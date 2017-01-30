@@ -21,7 +21,7 @@ class BookTitle: UIView {
     
     var bookEditor:JVFloatLabeledTextField?
     
-    var delegate:BookTitleDelegate?
+    weak var delegate:BookTitleDelegate?
     
     override init(frame: CGRect) {
         super.init(frame: frame)

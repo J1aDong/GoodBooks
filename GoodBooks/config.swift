@@ -23,3 +23,8 @@ let MAIN_RED = UIColor(colorLiteralRed: 235/255, green: 114/255, blue: 118/255, 
 
 //MARK:- 方正粗金陵字体
 let MY_FONT = "FZCUJINLJW--GB1-0"
+
+//MARK:- 放回颜色
+func RGB(r:CGFloat,g:CGFloat,b:CGFloat) -> UIColor{
+    return UIColor(red: r/255.0, green: g/255.0, blue: b/255.0, alpha: 1)
+}
