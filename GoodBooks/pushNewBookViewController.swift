@@ -23,6 +23,11 @@ class pushNewBookViewController: UIViewController,BookTitleDelegate,PhotoPickerD
     // 是否显示星星
     var ldx_show = false
     
+    var type = "文学"
+    var detailType = "文学"
+    
+    var book_description = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -100,7 +105,9 @@ class pushNewBookViewController: UIViewController,BookTitleDelegate,PhotoPickerD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.titleArray.count
+        let count = self.titleArray.count
+        print(count)
+        return count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -114,7 +121,7 @@ class pushNewBookViewController: UIViewController,BookTitleDelegate,PhotoPickerD
             view.removeFromSuperview()
         }
         
-        if indexPath.row != 1 {
+        if (indexPath.row != 1) {
             // 添加右边的小箭头
             cell.accessoryType = .disclosureIndicator
         }
@@ -122,12 +129,28 @@ class pushNewBookViewController: UIViewController,BookTitleDelegate,PhotoPickerD
         cell.textLabel?.text = self.titleArray[indexPath.row]
         cell.textLabel?.font = UIFont(name: MY_FONT, size: 15)
         cell.detailTextLabel?.font = UIFont(name: MY_FONT, size: 13)
-        switch indexPath.row {
-        case 0:
-            cell.detailTextLabel?.text = self.book_title
-            break
-        default:
-            break
+        
+        var row = indexPath.row
+        if self.ldx_show && row>1{
+            row -= 1
+        }
+        switch row {
+            case 0:
+                cell.detailTextLabel?.text = self.book_title
+                break
+            case 2:
+                cell.detailTextLabel?.text = self.type + "->" + self.detailType
+                break
+            case 4:
+                cell.accessoryType = .none
+                let commentView = UITextView(frame: CGRect(x: 4, y: 4, width: SCREEN_WIDTH-8, height: 80))
+                commentView.text = self.book_description
+                commentView.font = UIFont(name: MY_FONT, size: 14)
+                commentView.isEditable = false
+                cell.contentView.addSubview(commentView)
+                break
+            default:
+                break
         }
         
         // 是否需要在第二行显示小星星
@@ -138,12 +161,21 @@ class pushNewBookViewController: UIViewController,BookTitleDelegate,PhotoPickerD
         return cell
     }
     
+    //    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if self.ldx_show && indexPath.row > 5 {
+            return 88
+        }else if !self.ldx_show && indexPath.row > 4 {
+            return 88
+        }else{
+            return 44
+        }
+    }
+
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.tableView?.deselectRow(at: indexPath, animated: true)
-        
         var row = indexPath.row
-        
-        if self.ldx_show && row>=1 {
+        if self.ldx_show && row>1 {
             row -= 1
         }
         
@@ -207,6 +239,13 @@ class pushNewBookViewController: UIViewController,BookTitleDelegate,PhotoPickerD
         let btn2 = vc.view.viewWithTag(1235) as? UIButton
         btn1?.setTitleColor(RGB(r: 38, g: 82, b: 67), for: .normal)
         btn2?.setTitleColor(RGB(r: 38, g: 82, b: 67), for: .normal)
+        vc.type = self.type
+        vc.detailType = self.detailType
+        vc.callBack = ({(type:String,detailType:String)->Void in
+            self.type = type
+            self.detailType = detailType
+            self.tableView?.reloadData()
+        })
         
         self.present(vc, animated: true) {
             
@@ -217,6 +256,18 @@ class pushNewBookViewController: UIViewController,BookTitleDelegate,PhotoPickerD
     func tableViewSelectDescription(){
         let vc = push_DescriptionViewController()
         UiUtil.addTitleWithTitle(target: vc)
+        vc.textView?.text = self.book_description
+        vc.callBack = ({(description:String)->Void in
+            self.book_description = description
+            
+            if self.titleArray.last == ""{
+                self.titleArray.removeLast()
+            }
+            if description != ""{
+                self.titleArray.append("")
+            }
+            self.tableView?.reloadData()
+        })
         self.present(vc, animated: true) {
             
         }

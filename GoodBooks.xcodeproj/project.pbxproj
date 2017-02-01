@@ -33,6 +33,10 @@
 		901C82A41E3E2C4B0089DC9D /* star-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 901C82931E3E2C4B0089DC9D /* star-icon@2x.png */; };
 		901C82AA1E3EE6CD0089DC9D /* IGLDropDownItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 901C82A71E3EE6CD0089DC9D /* IGLDropDownItem.m */; };
 		901C82AB1E3EE6CD0089DC9D /* IGLDropDownMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 901C82A91E3EE6CD0089DC9D /* IGLDropDownMenu.m */; };
+		901C82AF1E3F57290089DC9D /* XKeyBoard.m in Sources */ = {isa = PBXBuildFile; fileRef = 901C82AE1E3F57290089DC9D /* XKeyBoard.m */; };
+		901C82B21E3F77810089DC9D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 901C82B11E3F77810089DC9D /* Login.storyboard */; };
+		901C82B41E3F7CAA0089DC9D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C82B31E3F7CAA0089DC9D /* LoginViewController.swift */; };
+		901C82B61E3F7CBB0089DC9D /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 901C82B51E3F7CBB0089DC9D /* RegisterViewController.swift */; };
 		90D07A761E37710000024CB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90D07A751E37710000024CB4 /* AppDelegate.swift */; };
 		90D07A7E1E37710000024CB4 /* GoodBooks.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 90D07A7C1E37710000024CB4 /* GoodBooks.xcdatamodeld */; };
 		90D07A801E37710000024CB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90D07A7F1E37710000024CB4 /* Assets.xcassets */; };
@@ -108,6 +112,11 @@
 		901C82A71E3EE6CD0089DC9D /* IGLDropDownItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLDropDownItem.m; sourceTree = "<group>"; };
 		901C82A81E3EE6CD0089DC9D /* IGLDropDownMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGLDropDownMenu.h; sourceTree = "<group>"; };
 		901C82A91E3EE6CD0089DC9D /* IGLDropDownMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGLDropDownMenu.m; sourceTree = "<group>"; };
+		901C82AD1E3F57290089DC9D /* XKeyBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XKeyBoard.h; sourceTree = "<group>"; };
+		901C82AE1E3F57290089DC9D /* XKeyBoard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XKeyBoard.m; sourceTree = "<group>"; };
+		901C82B11E3F77810089DC9D /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		901C82B31E3F7CAA0089DC9D /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		901C82B51E3F7CBB0089DC9D /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		90D07A721E37710000024CB4 /* GoodBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GoodBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		90D07A751E37710000024CB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		90D07A7D1E37710000024CB4 /* GoodBooks.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GoodBooks.xcdatamodel; sourceTree = "<group>"; };
@@ -231,6 +240,25 @@
 			path = IGLDropDownMenu;
 			sourceTree = "<group>";
 		};
+		901C82AC1E3F57290089DC9D /* XKeyBoard */ = {
+			isa = PBXGroup;
+			children = (
+				901C82AD1E3F57290089DC9D /* XKeyBoard.h */,
+				901C82AE1E3F57290089DC9D /* XKeyBoard.m */,
+			);
+			path = XKeyBoard;
+			sourceTree = "<group>";
+		};
+		901C82B01E3F77630089DC9D /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				901C82B11E3F77810089DC9D /* Login.storyboard */,
+				901C82B31E3F7CAA0089DC9D /* LoginViewController.swift */,
+				901C82B51E3F7CBB0089DC9D /* RegisterViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
 		90D07A691E37710000024CB4 = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +283,7 @@
 		90D07A741E37710000024CB4 /* GoodBooks */ = {
 			isa = PBXGroup;
 			children = (
+				901C82B01E3F77630089DC9D /* Login */,
 				90D0B2391E38B361003186E6 /* common */,
 				90D0B2361E38B290003186E6 /* pushNewBook */,
 				90D0B2271E379B66003186E6 /* more */,
@@ -377,6 +406,7 @@
 		90E28B551E3CD63000A41D0C /* thirdKit */ = {
 			isa = PBXGroup;
 			children = (
+				901C82AC1E3F57290089DC9D /* XKeyBoard */,
 				901C82A51E3EE6CD0089DC9D /* IGLDropDownMenu */,
 				901C82801E3E2C4A0089DC9D /* AKSegmentedControl */,
 				901C82781E3DC36B0089DC9D /* LDXScore */,
@@ -513,6 +543,7 @@
 				901C82981E3E2C4B0089DC9D /* segmented-bg-pressed-left@2x.png in Resources */,
 				901C829E1E3E2C4B0089DC9D /* segmented-separator@2x.png in Resources */,
 				901C82951E3E2C4B0089DC9D /* segmented-bg-pressed-center.png in Resources */,
+				901C82B21E3F77810089DC9D /* Login.storyboard in Resources */,
 				901C829F1E3E2C4B0089DC9D /* settings-icon.png in Resources */,
 				901C82A01E3E2C4B0089DC9D /* settings-icon@2x.png in Resources */,
 				90D0B2351E388B98003186E6 /* FZCuJinLJW.TTF in Resources */,
@@ -592,6 +623,8 @@
 				90D07A7E1E37710000024CB4 /* GoodBooks.xcdatamodeld in Sources */,
 				90D0B23B1E38B388003186E6 /* UiUtil.swift in Sources */,
 				90D0B22C1E379BAE003186E6 /* searchViewController.swift in Sources */,
+				901C82B61E3F7CBB0089DC9D /* RegisterViewController.swift in Sources */,
+				901C82B41E3F7CAA0089DC9D /* LoginViewController.swift in Sources */,
 				901C82751E3D60C60089DC9D /* push_TypeViewController.swift in Sources */,
 				90E28B371E39EFAE00A41D0C /* BookTitle.swift in Sources */,
 				90E28B541E3A36CA00A41D0C /* photoPickerViewController.swift in Sources */,
@@ -606,6 +639,7 @@
 				901C82771E3D7D830089DC9D /* push_DescriptionViewController.swift in Sources */,
 				90E28B591E3CD6F800A41D0C /* VPImageCropperViewController.m in Sources */,
 				90D07A761E37710000024CB4 /* AppDelegate.swift in Sources */,
+				901C82AF1E3F57290089DC9D /* XKeyBoard.m in Sources */,
 				901C82AA1E3EE6CD0089DC9D /* IGLDropDownItem.m in Sources */,
 				90D2766E1E38F55E005904E9 /* Extensions.swift in Sources */,
 				90D0B2381E38B2BF003186E6 /* pushNewBookViewController.swift in Sources */,
