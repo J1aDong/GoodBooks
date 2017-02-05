@@ -8,7 +8,7 @@
 
 import UIKit
 import CoreData
-import LeanCloud
+import AVOSCloud
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -33,6 +33,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        }
         
         self.window = UIWindow(frame: CGRect(x: 0, y: 0, width: SCREEN_WIDTH, height: SCREEN_HEIGHT))
+        
+        // applicationId 即 App Id，applicationKey 是 App Key
+        AVOSCloud.setApplicationId("TA9p1dH9HIS1cDaVB8cu33eO-gzGzoHsz", clientKey: "M0Da93ljH6lN61H3iFGl5Nnr")
         
         let tabbarController = UITabBarController()
         
@@ -60,9 +63,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         self.window?.rootViewController = tabbarController
         self.window?.makeKeyAndVisible()
-        
-        // applicationId 即 App Id，applicationKey 是 App Key
-        LeanCloud.initialize(applicationID: "TA9p1dH9HIS1cDaVB8cu33eO-gzGzoHsz", applicationKey: "M0Da93ljH6lN61H3iFGl5Nnr")
         
         return true
     }

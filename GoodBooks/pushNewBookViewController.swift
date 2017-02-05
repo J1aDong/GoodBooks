@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVOSCloud
 
 class pushNewBookViewController: UIViewController,BookTitleDelegate,PhotoPickerDelegate,VPImageCropperDelegate,UITableViewDelegate,UITableViewDataSource {
     
@@ -27,6 +28,10 @@ class pushNewBookViewController: UIViewController,BookTitleDelegate,PhotoPickerD
     var detailType = "文学"
     
     var book_description = ""
+    
+    // 编辑
+    var bookObject:AVObject?
+    var fixType:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,10 +59,30 @@ class pushNewBookViewController: UIViewController,BookTitleDelegate,PhotoPickerD
         self.ldx_score?.highlightImg = UIImage(named: "btn_star_evaluation_press")
         self.ldx_score?.max_star = 5
         self.ldx_score?.show_star = 5
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(pushBookNotification), name: NSNotification.Name(rawValue: "pushBookNotification"), object: nil)
+    }
+    
+    func pushBookNotification(_ notification:Notification){
+        let dict = notification.userInfo
+        if String(describing: dict!["success"]!) == "true" {
+            if self.fixType == "fix" {
+                ProgressHUD.showSuccess("修改成功")
+            }else{
+                ProgressHUD.showSuccess("上传成功")
+            }
+            self.dismiss(animated: true, completion: { 
+                
+            })
+        }else{
+            ProgressHUD.showError("上传失败")
+        }
     }
     
     deinit {
         print("deinit pushNewBookViewController")
+        
+        NotificationCenter.default.removeObserver(self)
     }
     
     override func didReceiveMemoryWarning() {
@@ -84,6 +109,28 @@ class pushNewBookViewController: UIViewController,BookTitleDelegate,PhotoPickerD
         
     }
     
+    // 编辑
+    func fixBook(){
+        if self.fixType == "fix" {
+            self.bookTitle?.bookName?.text = self.bookObject!["BookName"] as? String
+            self.bookTitle?.bookEditor?.text = self.bookObject!["BookEditor"] as? String
+            let coverFile = self.bookObject!["cover"] as? AVFile
+            coverFile?.getDataInBackground({ (data, error) in
+                self.bookTitle?.bookCover?.setImage(UIImage(data: data!), for: .normal)
+            })
+            
+            self.book_title = (self.bookObject!["title"] as? String)!
+            self.type = (self.bookObject!["type"] as? String)!
+            self.detailType = (self.bookObject!["detailType"] as? String)!
+            self.book_description = (self.bookObject?["description"] as? String)!
+            self.ldx_score?.show_star = (Int)((self.bookObject!["score"] as? String)!)!
+            
+            if self.book_description != "" {
+                self.titleArray.append("")
+            }
+        }
+    }
+    
     func imageCropper(_ cropperViewController: VPImageCropperViewController!, didFinished editedImage: UIImage!) {
         self.bookTitle?.bookCover?.setImage(editedImage, for: .normal)
         cropperViewController.dismiss(animated: true) {
@@ -95,6 +142,25 @@ class pushNewBookViewController: UIViewController,BookTitleDelegate,PhotoPickerD
         cropperViewController.dismiss(animated: true) {
             
         }
+    }
+    
+    override func confirm() {
+        let dict:[String:Any] = ["BookName":(self.bookTitle?.bookName?.text)!,
+            "BookEditor":(self.bookTitle?.bookEditor?.text)!,
+            "BookCover":(self.bookTitle?.bookCover?.currentImage)!,
+            "title":self.book_title,
+            "score":String((self.ldx_score?.show_star)!),
+            "type":self.type as AnyObject,
+            "detailType":self.detailType,
+            "description":self.book_description]
+        
+        if self.fixType == "fix" {
+            pushBook.pushBookInBack(dict: dict,object: self.bookObject!)
+        }else{
+            let object = AVObject(className: "Book")
+            pushBook.pushBookInBack(dict: dict,object: object)
+        }
+        
     }
     
     override func cancel(){
@@ -163,9 +229,9 @@ class pushNewBookViewController: UIViewController,BookTitleDelegate,PhotoPickerD
     
     //    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if self.ldx_show && indexPath.row > 5 {
+        if self.ldx_show && indexPath.row >= 5 {
             return 88
-        }else if !self.ldx_show && indexPath.row > 4 {
+        }else if !self.ldx_show && indexPath.row >= 4 {
             return 88
         }else{
             return 44

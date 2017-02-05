@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import LeanCloud
+import AVOSCloud
 
 class rankViewController: UIViewController {
 
@@ -15,7 +15,7 @@ class rankViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
 
-        if  LCUser.current == nil{
+        if  AVUser.current() == nil{
             let story = UIStoryboard(name: "Login", bundle: nil)
             let loginVC = story.instantiateViewController(withIdentifier: "Login")
             self.present(loginVC, animated: true, completion: { 

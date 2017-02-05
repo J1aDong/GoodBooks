@@ -25,7 +25,7 @@ class UiUtil: NSObject {
         btn2.setTitle(title2, for: .normal)
         btn2.contentHorizontalAlignment = .right
         btn2.setTitleColor(MAIN_RED, for: .normal)
-        btn2.titleLabel?.font = UIFont(name: MY_FONT, size: 14)
+        btn2.titleLabel?.font = UIFont(name: MY_FONT, size: 16)
         btn2.tag = 1235
         target.view.addSubview(btn2)
 

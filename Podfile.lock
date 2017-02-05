@@ -1,23 +1,45 @@
 PODS:
-  - Alamofire (4.2.0)
+  - AVOSCloud (3.10.0)
+  - AVOSCloudCrashReporting (3.10.0):
+    - AVOSCloud (= 3.10.0)
+    - AVOSCloudCrashReporting/_ARC (= 3.10.0)
+    - AVOSCloudCrashReporting/_NOARC (= 3.10.0)
+  - AVOSCloudCrashReporting/_ARC (3.10.0):
+    - AVOSCloud (= 3.10.0)
+    - AVOSCloudCrashReporting/_NOARC (= 3.10.0)
+  - AVOSCloudCrashReporting/_NOARC (3.10.0):
+    - AVOSCloud (= 3.10.0)
+  - AVOSCloudIM (3.10.0):
+    - AVOSCloud (= 3.10.0)
+    - AVOSCloudIM/_ARC (= 3.10.0)
+    - AVOSCloudIM/_NOARC (= 3.10.0)
+  - AVOSCloudIM/_ARC (3.10.0):
+    - AVOSCloud (= 3.10.0)
+    - AVOSCloudIM/_NOARC (= 3.10.0)
+  - AVOSCloudIM/_NOARC (3.10.0):
+    - AVOSCloud (= 3.10.0)
   - JVFloatLabeledTextField (1.1.1)
-  - LeanCloud (10.0.0):
-    - LeanCloud/Storage (= 10.0.0)
-  - LeanCloud/Storage (10.0.0):
-    - Alamofire (~> 4.2.0)
-  - ProgressHUD (2.4)
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - SWTableViewCell (0.3.7)
 
 DEPENDENCIES:
+  - AVOSCloud
+  - AVOSCloudCrashReporting
+  - AVOSCloudIM
   - JVFloatLabeledTextField
-  - LeanCloud
-  - ProgressHUD
+  - SDWebImage
+  - SWTableViewCell
 
 SPEC CHECKSUMS:
-  Alamofire: aa2e09d871c9160ac53c90e83c68064a94e3dfbe
+  AVOSCloud: 839b30ac3b382ad56c957ed6dd28a0a537d33d67
+  AVOSCloudCrashReporting: 931211f7185b6849d1bf9dfc935202745182cc8d
+  AVOSCloudIM: 13c9cf14b42304f4243d01906c17b5ee8f5529db
   JVFloatLabeledTextField: 0e5524b097f102036214dd8279edc8ecf08b5e18
-  LeanCloud: 0a6a0d52e33dd43d998ab256cc83f6c4954607b8
-  ProgressHUD: 4b66b0df0e08519c5c7283a198fd2867a114c95a
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  SWTableViewCell: 2a94aadc9d47b2b611fa064566bf57948b95b579
 
-PODFILE CHECKSUM: b5b234e658f6920ea55bd52525e43606759f6f9e
+PODFILE CHECKSUM: 4704ead5bfe5696bfb71730010bac999ce6bbe8b
 
 COCOAPODS: 1.1.1

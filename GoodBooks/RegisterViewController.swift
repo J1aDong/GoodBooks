@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import LeanCloud
-import ProgressHUD
+import AVOSCloud
 
 class RegisterViewController: UIViewController {
 
@@ -19,27 +18,25 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var email: UITextField!
 
     @IBAction func regist(_ sender: Any) {
-        let user = LCUser()
-        user.username = LCString(self.userName.text!)
-        user.password = LCString(self.password.text!)
-        user.email = LCString(self.email.text!)
-        user.signUp { (result) in
-            switch result{
-                case .success:
-                    ProgressHUD.showSuccess("注册成功,请验证邮箱")
-                    self.dismiss(animated: true, completion: { 
-                        
-                    })
-                    break
-                case .failure(let error):
-                    ProgressHUD.showSuccess("注册失败,\(error.reason)")
-                    break
-                }
-        }
+        let user = AVUser()
+        user.username = String(self.userName.text!)
+        user.password = String(self.password.text!)
+        user.email = String(self.email.text!)
+        user.signUpInBackground({ (result, error)->Void in
+            if result{
+                ProgressHUD.showSuccess("注册成功,请验证邮箱")
+                self.dismiss(animated: true, completion: {
+                    
+                })
+            }else{
+                ProgressHUD.showError("注册失败")
+            }
+        })
+
     }
     
     @IBAction func close(_ sender: Any) {
-        self.dismiss(animated: true) { 
+        self.dismiss(animated: true) {
             
         }
     }

@@ -7,8 +7,7 @@
 //
 
 import UIKit
-import LeanCloud
-import ProgressHUD
+import AVOSCloud
 
 class LoginViewController: UIViewController {
 
@@ -17,17 +16,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var password: UITextField!
     
     @IBAction func login(_ sender: Any) {
-        LCUser.logIn(username: self.userName.text!, password: self.password.text!) { (result) in
-            switch result{
-                case .success( _):
-                    ProgressHUD.showSuccess("登录成功")
-                    self.dismiss(animated: true, completion: {
-                        
-                    })
-                    break
-                case .failure(let error):
-                    ProgressHUD.showError("登录失败\(error.reason)")
-                    break
+        
+        AVUser.logInWithUsername(inBackground: self.userName.text!, password: self.password.text!) { (user, error) in
+            if error == nil{
+                ProgressHUD.showSuccess("登录成功")
+                self.dismiss(animated: true, completion: {
+                    
+                })
+            }else{
+                ProgressHUD.showError("用户名或密码错误\(error)")
             }
         }
     }
